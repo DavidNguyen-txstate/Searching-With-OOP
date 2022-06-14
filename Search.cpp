@@ -15,18 +15,18 @@ int Search::LinearSearch(int some_array[], int length, int element) {
 
 int Search::BinarySearch(int some_array[], int length, int element) {
 	int lower_bound = 0;
-    int upper_bound = length-1;
-    while (lower_bound <= upper_bound) {
-    	int guess = (lower_bound + upper_bound) / 2;
-    	if (some_array[guess] == element) {
-      		return guess;	
-    	}
-    	else if (some_array[guess] < element) {
-      		lower_bound = guess + 1;
-    	}
-    	else {
-      		upper_bound = guess - 1;
-    	}
+    	int upper_bound = length-1;
+    	while (lower_bound <= upper_bound) {
+		int guess = (lower_bound + upper_bound) / 2;
+		if (some_array[guess] == element) {
+			return guess;	
+		}
+		else if (some_array[guess] < element) {
+			lower_bound = guess + 1;
+		}
+		else {
+			upper_bound = guess - 1;
+		}
   	}
   	return -1;
 }
